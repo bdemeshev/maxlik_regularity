@@ -105,30 +105,58 @@ style=alphabetic]{biblatex}
 
 \newtheorem{theorem}{Теорема}
 
+\newtheorem{assumption}{Предпосылка}
+
+
+
 \begin{document}
 
-Условия регулярности:
-\begin{itemize}[align=parleft, leftmargin=-1cm, itemindent=7cm, labelsep=2cm, labelwidth=4cm]
-  \item [IID] Случайные величины $X_1$, $X_2$, \ldots, $X_n$ независимы и одинаково распределены.
-  \item [Density] У величины $X_i$ есть функция плотности $f_{\theta}(x)$.
-  \item [Identifiability] Если $\theta \neq \theta'$, то законы распределения $f_\theta$ и $f_{\theta'}$ отличаются.
-  \item [Support] Носитель $\Supp f_\theta$ не зависит от $\theta$. 
-  Носителем называют замыкание множества, на котором функции плотности положительна.
-  \item [Interior] Истинное $\theta_T$ является внутренней точкой множества всех возможных значений неизвестного параметра $\Theta$.
-  \item [Differentiable-1] Плотность $f_\theta(x)$ дифференциируема по $\theta$ один раз.
-  \item [Differentiable-2] Плотность $f_\theta(x)$ дифференциируема по $\theta$ два раза.
-  \item [Differentiable-3] Плотность $f_\theta(x)$ дифференциируема по $\theta$ три раза.
-\item [Uniqueness] Условие первого порядка $\ell'(\theta)=0$ имеет единственное решение. 
-\item [Interchange] Интеграл $I = \int_{\RR} f_\theta (x) dx$ дважды дифференцируем по $\theta$ и 
-вторая производная может быть найдена путём смены порядка интегрирования и дифференцирования.
-\item [Bound] Существует функция $M(x)$, такая что 
-$\E_T(M(X_i)) < \infty$ и $\abs{\partial^3 \ln f_\theta(x)/\partial \theta^3} \leq M(x)$ для всех $x$ 
-и любых $\theta$ из некоторой открытой окрестности настоящего $\theta_T$.
-\end{itemize}
+\section*{Предпосылки}
+
+\begin{assumption}[IID] 
+  Случайные величины $X_1$, $X_2$, \ldots, $X_n$ независимы и одинаково распределены.
+\end{assumption}
+  
+
+\begin{assumption}[Density] 
+  У величины $X_i$ есть функция плотности $f_{\theta}(x)$.
+\end{assumption}
+
+\begin{assumption}[Identifiability] 
+  Если $\theta \neq \theta'$, то законы распределения $f_\theta$ и $f_{\theta'}$ отличаются.
+\end{assumption}
 
 
+\begin{assumption}[Support] 
+  Носитель $\Supp f_\theta$ не зависит от $\theta$. 
+  Носителем называют замыкание множества, на котором функция плотности положительна.
+\end{assumption}
 
-Теоремы:Supp
+
+\begin{assumption}[Interior] 
+  Истинное $\theta_T$ является внутренней точкой множества всех возможных значений неизвестного параметра $\Theta$.
+\end{assumption}
+
+\begin{assumption}[Differentiable-k] 
+  Плотность $f_\theta(x)$ дифференциируема по $\theta$ как минимум $k$ раз.
+\end{assumption}
+
+\begin{assumption}[Uniqueness] 
+  Условие первого порядка $\ell'(\theta)=0$ имеет единственное решение. 
+\end{assumption}
+
+\begin{assumption}[Interchange] 
+  Интеграл $I = \int_{\RR} f_\theta (x) dx$ дважды дифференцируем по $\theta$ и 
+  вторая производная может быть найдена путём смены порядка интегрирования и дифференцирования.
+\end{assumption}
+
+\begin{assumption}[Bound] 
+  Существует функция $M(x)$, такая что 
+  $\E_T(M(X_i)) < \infty$ и $\abs{\partial^3 \ln f_\theta(x)/\partial \theta^3} \leq M(x)$ для всех $x$ 
+  и всех $\theta$ из некоторой открытой окрестности настоящего $\theta_T$.
+\end{assumption}
+
+\section*{Теоремы}
 
 \begin{theorem}
   Если выполнены условия [IID], [Density], [Identifiability], [Support], [Interior], [Differentiable-1], [Uniqueness], то 
@@ -150,10 +178,14 @@ $\E_T(M(X_i)) < \infty$ и $\abs{\partial^3 \ln f_\theta(x)/\partial \theta^3} \
   \]
   и, в частности, асимптотически эффективны:
   \[
-  \lim \Var(\hat \theta_n) I_F = 1  
+  \lim_{n\to\infty} \Var(\hat \theta_n) I_F = 1  
   \]
 \end{theorem}
 
+
+\section*{Фабулы доказательств}
+
+\section*{Формальные доказательства}
 
 \section*{Источники мудрости}
 
