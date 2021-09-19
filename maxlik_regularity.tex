@@ -170,8 +170,9 @@ style=alphabetic]{biblatex}
   \]
 \end{theorem}
 
+
 \begin{theorem}
-  Если выполнены условия [IID], [Density], [Identifiability], [Support], [Interior], [Differentiable-3], [Interchange], [Bound], то 
+  Если выполнены условия [IID], [Density], [Identifiability], [Support], [Interior], [Differentiable-3], [Interchange], [Bound], то
   оценки асимптотически нормальны
   \[
      \sqrt{I_F} (\hat\theta_n - \theta_T) \to \cN(0;1)
@@ -183,13 +184,30 @@ style=alphabetic]{biblatex}
 \end{theorem}
 
 
+\begin{theorem}
+  Если выполнены условия [IID], [Density], [Identifiability], [Support], [Interior], [Differentiable-3], [Interchange], [Bound], (need to check multivariate case), $\theta = (\theta_a, \theta_b)$, то 
+  при верной $H_0$: $\theta_a = 0$ статистики $LR$, $LM$, $W$ асимптотически распределены как $\chi^2_{p_a}$.
+\end{theorem}
+
+
+\newpage
 \section*{Фабулы доказательств}
+
+
+Хи-квадрат распределение для статистики Вальда следует из асимптотической нормальности оценок. 
+
+Асимптотическая эквивалентность трёх статистик доказывается с помощью квадратичной аппроксимации рядом Тейлора. 
+
+А для квадратичной по $\theta$ логарифмической функции правдоподобия $LR$, $LM$, $W$ статистики в точности эквивалентны, 
+это просто манипуляции с параболой на уровне 9-го класса.
+
 
 \section*{Формальные доказательства}
 
 \section*{Источники мудрости}
 
-% \nocite{}
+\nocite{martin2013maxlik}
+\nocite{wood2017generalized}
 
 \printbibliography[heading=none]
 
